@@ -1,11 +1,11 @@
 //Botao de tema inicio
 
 const btn = document.getElementById('btn-tema');
-// let darkMode = false;
+let darkMode = false;
 const navbar = document.getElementById('mnNvB');
 
 btn.onclick = function () {
-    // darkMode = !darkMode;
+    darkMode = !darkMode;
     document.body.classList.toggle('dark-mode-active');
     if (document.body.classList.contains('dark-mode-active')) {
         document.body.style.background = '#222';

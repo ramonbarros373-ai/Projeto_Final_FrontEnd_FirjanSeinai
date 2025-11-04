@@ -1,7 +1,9 @@
+/* Botao de tema inicio  */
+
 body {
     /* margin: 0;
-    padding: 0;
-    box-sizing: border-box; */
+    padding: 0;*/
+    box-sizing: border-box;
     /* CSS para o tema claro */
     background-color: #fff;
     color: #222;
@@ -14,6 +16,22 @@ body.dark-mode-active {
     background-color: #222;
     color: #eee;
 }
+
+#btn-tema {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Botao de tema fim */
 
 header {
     width: 100%;
@@ -30,7 +48,7 @@ header {
 }
 
 .navbar {
-    border: 2px solid black;
+    border: 2px solid lime;
     /* position: fixed; */
     width: 100%;
     /* margin-top: 10px; */
@@ -52,77 +70,78 @@ header {
     border-radius: 50%;
 }
 
-.logo2 {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    border-radius: 50%;
-}
-
 main {
-    height: 150vh;
-    display: flex;
+    height: 200vh;
+    /* display: flex; */
     padding-top: 100px;
     border: 2px solid red;
     /* margin-top: 150px; */
     justify-content: center;
     /* align-items: center; */
-    /* text-align: center; */
+    text-align: center;
 }
 
-h2{
-    border: 2px solid purple;
-     width: 100px;
-  height: 100px;
+
+.mainlogo {
+    display: flexbox;
+    border: 2px solid pink;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo2 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid yellow;
     border-radius: 50%;
 }
+
+.txtlogo {
+    border: 2px solid brown;
+}
+
+.redeslogo {
+    border: 2px solid gray;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    /* quero colocar a com 2 em cima e 1 embaixo */
+    gap: 10px;
+    padding: 0;
+}
+
+/* h2 {
+    border: 2px solid purple;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+} */
 
 /* span{
     height: vh;
     margin-top: 150px;
 } */
 footer {
-    border: 2px solid green;
-    height: 50px;
-    text-align: left;
-}
-
-/* Botao de tema inicio  */
-
-#btn-tema {
+    width: 100%;
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1;
-    padding: 12px 16px;
-    border: none;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-size: 24px;
+    border: 2px solid green;
+    height: 60px;
+    text-align: left;
+    bottom: 0px;
 }
 
-
-/* Botao de tema fim */
-
-/*  */
-.container {
-  width: 80%;
-  margin: 20px auto;
+.refc {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    border: 2px solid orange;
+    bottom: 0px;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
-svg text {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  fill: #000000; /* Cor do texto */
+body.dark-mode-active .refc {
+    background-color: #333; 
+    color: #eee;
 }
-
-/* Opcional: Mostra a linha do caminho para depuração */
-/* 
-#caminhoCurvo {
-  stroke: #ccc; 
-  stroke-width: 1;
-}
-*/
-/*  */
