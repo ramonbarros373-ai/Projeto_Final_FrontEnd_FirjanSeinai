@@ -29,6 +29,7 @@ body.dark-mode-active {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 24px;
+    /* dar um jeito do mudar a posiçao do botao, mas nao sei onde por */
 }
 
 /* Botao de tema fim */
@@ -91,8 +92,8 @@ main {
 }
 
 .logo2 {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: 2px solid yellow;
     border-radius: 50%;
 }
@@ -101,16 +102,107 @@ main {
     border: 2px solid brown;
 }
 
+/* .listaredes {
+    border: 2px solid black;
+    height: 100vh;
+    display: flex;
+} */
 .redeslogo {
     border: 2px solid gray;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    /* quero colocar a com 2 em cima e 1 embaixo */
+    /* quero colocar a com 2 em cima e 1 embaixo, foi! */
+    flex-wrap: wrap;
+    /* da mais de uma linhao container do display flex */
     gap: 10px;
     padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
+.redeslogo li {
+    /* Define a largura para 50%. Subtrai um pouco para margem se necessário */
+    flex-basis: calc(40% - 10px);
+    margin: 0 5px;
+    /* Adiciona algum espaço entre os itens */
+    /* Outros estilos para visualização */
+    /* background-color: #f0f0f0; */
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+
+}
+/* inicio das modificaçaoes para o domino */
+.fa-brands{
+    color: black;
+    font-size: 40px;
+    line-height: 80px;
+    transition: .5s;
+    padding-right: 14px;
+}
+.linkredes{
+    width: 210px;
+    height: 10px;
+    background-color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(-30deg) skew(25deg);
+    translate(0, 0);
+    box-shadow: -20px 20px 10px #00000000;
+}
+.sredes{
+    color: black;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    letter-spacing: 4px;
+    transition: .5s;
+}
+.sredes:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: white;
+    top: 10px;
+    left: -20px;
+    transform: rotate(0deg) skewY(-45deg);
+}
+.sredes:after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: white;
+    bottom: -20px;
+    left: -10px;
+    transform: rotate(0deg) skewX(-45deg);
+}
+.sredes:hover{
+    transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+    box-shadow: -50px 50px 30px #00000000;
+}
+.rede1:hover .fa-brands,
+.rede1:hover .sredes{
+    color: white;
+}
+.rede1:hover:nth-child(1) {
+    & a{
+        background: #3b5998;
+        &::before{
+            background: #365492;
+        }
+
+        &::after{
+            background: #4a69ad;
+        }
+    }
+}
+/* fim das modificaçoes para o domino */
 /* h2 {
     border: 2px solid purple;
     width: 100px;
@@ -131,17 +223,25 @@ footer {
     bottom: 0px;
 }
 
-.refc {
+.contatos {
     width: 100%;
-    height: 50px;
+    /* height: 50px; */
     position: fixed;
     border: 2px solid orange;
     bottom: 0px;
     background-color: #f8f9fa;
     color: #212529;
+    padding-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 163px;
+    padding-left: 10px;
+    list-style-type: none;
+
 }
 
-body.dark-mode-active .refc {
-    background-color: #333; 
+
+body.dark-mode-active .contatos {
+    background-color: #333;
     color: #eee;
 }
