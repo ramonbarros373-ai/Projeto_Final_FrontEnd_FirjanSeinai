@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=RobotoCondensed:300,400");
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
 /* Botao de tema inicio  */
 
 body {
@@ -46,6 +49,7 @@ header {
     /* padding: 5px 5px; */
     /* background-color: lightgray; */
     position: fixed;
+    z-index: 1000;
 }
 
 .navbar {
@@ -54,6 +58,8 @@ header {
     width: 100%;
     /* margin-top: 10px; */
     /* margin-bottom: 10px; */
+    /* z-index: 9999; */
+    background-color: white;
 }
 
 /* .nav { */
@@ -90,6 +96,13 @@ main {
     align-items: center;
     text-align: center;
 }
+/* .mainlogo .logo2{
+    padding-top: 10px;
+} */
+
+.txtlogo {
+    border: 2px solid brown;
+}
 
 .logo2 {
     width: 150px;
@@ -98,52 +111,95 @@ main {
     border-radius: 50%;
 }
 
-.txtlogo {
-    border: 2px solid brown;
-}
 
-/* .listaredes {
+/* inicio das modificaçaoes para o domino */
+.listaredes {
     border: 2px solid black;
     height: 100vh;
     display: flex;
-} */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* background: #ccc; */
+    /* z-index: 10; */
+}
+
 .redeslogo {
     border: 2px solid gray;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
+    /* list-style-type: none; */
+    /* justify-content: center; */
+    /* align-items: center; */
     /* quero colocar a com 2 em cima e 1 embaixo, foi! */
     flex-wrap: wrap;
     /* da mais de uma linhao container do display flex */
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+    gap: 150px 200px;
+    /* padding-left: 200px; */
+    /* margin: 0; */
     font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    /* height: 100vh; */
 }
 
-.redeslogo li {
-    /* Define a largura para 50%. Subtrai um pouco para margem se necessário */
+.redeslogo .rede1 {
+    /* border: 2px solid red; */
+    list-style: none;
+    /* margin: 0  100px; */
+    /* padding: 0  100px; */
+    /* align-items: center; */
+    /* flex: 1 1 211px; */
+    padding-right: 0;
+    padding-left: 15%;
+    /* margin-left: 10px; */
+}
+.redeslogo .rede2 {
+    /* border: 2px solid red; */
+    list-style: none;
+    /* margin: 0  100px; */
+    /* padding: 0  100px; */
+    /* align-items: center; */
+    /* flex: 1 1 211px; */
+    /* justify-content: flex-end; */
+    padding-right: 0;
+    padding-left: 15%;
+    /* margin-right: 0; */
+}
+.redeslogo .rede3 {
+    /* padding-right: 50px; */
+    list-style: none;
+    /* padding-bottom: 100px; */
+    /* margin-bottom: 350px; */
+    align-items: center;
+    justify-content: center;
+    padding-right: 10%;
+    padding-left: 40%;
+    /* margin-right: 45%; */
+}
+
+/* .redeslogo li {
+    Define a largura para 50%. Subtrai um pouco para margem se necessário
     flex-basis: calc(40% - 10px);
     margin: 0 5px;
-    /* Adiciona algum espaço entre os itens */
-    /* Outros estilos para visualização */
-    /* background-color: #f0f0f0; */
+    Adiciona algum espaço entre os itens
+    Outros estilos para visualização
+    background-color: #f0f0f0;
     padding: 10px;
     text-align: center;
     list-style: none;
 
-}
-/* inicio das modificaçaoes para o domino */
-.fa-brands{
+} */
+.fa-brands {
     color: black;
     font-size: 40px;
-    line-height: 80px;
+    line-height: 40px;
     transition: .5s;
     padding-right: 14px;
 }
-.linkredes{
+body.dark-mode-active .fa-brands {
+    color: white;
+}
+.linkredes {
     width: 210px;
-    height: 10px;
+    height: 80px;
     background-color: white;
     text-decoration: none;
     display: block;
@@ -151,9 +207,15 @@ main {
     padding-left: 20px;
     transform: rotate(-30deg) skew(25deg);
     translate(0, 0);
-    box-shadow: -20px 20px 10px #00000000;
+    box-shadow: -20px 20px 10px black;
 }
-.sredes{
+body.dark-mode-active .linkredes {
+    box-shadow: -20px 20px 10px white;
+        background-color: black;
+
+}
+
+.linkredes .sredes {
     color: black;
     padding: 0;
     margin: 0;
@@ -161,47 +223,123 @@ main {
     top: 30px;
     letter-spacing: 4px;
     transition: .5s;
+    z-index: 10;
 }
-.sredes:before{
+body.dark-mode-active .linkredes .sredes{
+    color: white;
+
+}
+
+.linkredes:before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 20px;
+    height: 100%;
+    width: 20px;
     background: white;
     top: 10px;
     left: -20px;
     transform: rotate(0deg) skewY(-45deg);
+    z-index: 10;
 }
-.sredes:after{
+body.dark-mode-active .linkredes:before {
+    background: black;
+}
+
+.linkredes:after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 100%;
+    height: 20px;
+    width: 100%;
     background: white;
     bottom: -20px;
     left: -10px;
     transform: rotate(0deg) skewX(-45deg);
+    z-index: 10;
+
 }
-.sredes:hover{
+body.dark-mode-active .linkredes:after {
+    background: black;
+}
+
+
+.linkredes:hover {
     transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-    box-shadow: -50px 50px 30px #00000000;
+    box-shadow: -50px 50px 30px black;
 }
+body.dark-mode-active .linkredes:hover {
+    box-shadow: -50px 50px 30px white;
+
+}
+
 .rede1:hover .fa-brands,
-.rede1:hover .sredes{
-    color: white;
+.rede1:hover .sredes {
+    color: red;
 }
+body.dark-mode-active .rede1:hover .fa-brands,
+body.dark-mode-active .rede1:hover .sredes {
+    color: red;
+}
+
+.rede2:hover .fa-brands,
+.rede2:hover .sredes {
+    color: red;
+}
+body.dark-mode-active .rede2:hover .fa-brands,
+body.dark-mode-active .rede2:hover .sredes {
+    color: red;
+}
+
+.rede3:hover .fa-brands,
+.rede3:hover .sredes {
+    color: red;
+}
+body.dark-mode-active .rede3:hover .fa-brands,
+body.dark-mode-active .rede3:hover .sredes {
+    color: red;
+}
+
 .rede1:hover:nth-child(1) {
-    & a{
+    & a {
         background: #3b5998;
-        &::before{
+
+        &::before {
             background: #365492;
         }
 
-        &::after{
+        &::after {
             background: #4a69ad;
         }
     }
 }
+
+.rede2:hover:nth-child(2) {
+    & a {
+        background: #3b5998;
+
+        &::before {
+            background: #365492;
+        }
+
+        &::after {
+            background: #4a69ad;
+        }
+    }
+}
+
+.rede3:hover:nth-child(3) {
+    & a {
+        background: #3b5998;
+
+        &::before {
+            background: #365492;
+        }
+
+        &::after {
+            background: #4a69ad;
+        }
+    }
+}
+
 /* fim das modificaçoes para o domino */
 /* h2 {
     border: 2px solid purple;
@@ -221,6 +359,10 @@ footer {
     height: 60px;
     text-align: left;
     bottom: 0px;
+    background-color: #f8f9fa;
+}
+body.dark-mode-active footer{
+    background-color: #333;
 }
 
 .contatos {
