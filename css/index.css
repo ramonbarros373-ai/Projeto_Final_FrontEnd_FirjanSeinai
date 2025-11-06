@@ -78,7 +78,7 @@ header {
 }
 
 main {
-    height: 200vh;
+    /* height: 250vh; */
     /* display: flex; */
     padding-top: 100px;
     border: 2px solid red;
@@ -86,6 +86,8 @@ main {
     justify-content: center;
     /* align-items: center; */
     text-align: center;
+        /* transition: width 0.5s ease-in-out; */
+
 }
 
 
@@ -95,6 +97,8 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 150vh;
+    /* transition: width 0.5s ease-in-out; */
 }
 /* .mainlogo .logo2{
     padding-top: 10px;
@@ -115,13 +119,15 @@ main {
 /* inicio das modificaçaoes para o domino */
 .listaredes {
     border: 2px solid black;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     /* background: #ccc; */
     /* z-index: 10; */
+    /* transition: width 0.5s ease-in-out; */
+
 }
 
 .redeslogo {
@@ -138,6 +144,8 @@ main {
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     /* height: 100vh; */
+    /* transition: width 0.5s ease-in-out; */
+    padding-top: 50px;
 }
 
 .redeslogo .rede1 {
@@ -147,10 +155,17 @@ main {
     /* padding: 0  100px; */
     /* align-items: center; */
     /* flex: 1 1 211px; */
-    padding-right: 0;
-    padding-left: 15%;
+    padding-right: 10%;
+    padding-left: 5%;
     /* margin-left: 10px; */
+    transition: padding-left 0.3s ease;
 }
+@media(max-width: 100vh){
+    .redeslogo .rede1{
+        padding-left: 15%;
+    }
+}
+
 .redeslogo .rede2 {
     /* border: 2px solid red; */
     list-style: none;
@@ -159,10 +174,25 @@ main {
     /* align-items: center; */
     /* flex: 1 1 211px; */
     /* justify-content: flex-end; */
-    padding-right: 0;
+    /* padding-right: 0; */
     padding-left: 15%;
     /* margin-right: 0; */
+    transition: padding-left 0.3s ease;
+    /* transition: width 0.5s ease-in-out; */
 }
+@media(max-width: 200vh){
+    .redeslogo .rede2{
+        padding-left: 20%;
+    }
+    transition: padding-left 0.3s ease;
+
+}
+@media(max-width: 100vh){
+    .redeslogo .rede2{
+        padding-left: 15%;
+    }
+}
+
 .redeslogo .rede3 {
     /* padding-right: 50px; */
     list-style: none;
@@ -170,9 +200,17 @@ main {
     /* margin-bottom: 350px; */
     align-items: center;
     justify-content: center;
-    padding-right: 10%;
+    /* padding-right: 10%; */
     padding-left: 40%;
-    /* margin-right: 45%; */
+    /* dar um jeito desse botao ficar no meio na tela expandida  e alinhado na tela comprimida, foi!!! */
+    /* margin-left: 25%; */
+    transition: padding-left 0.3s ease;
+
+}
+@media(max-width: 100vh){
+    .redeslogo .rede3{
+        padding-left: 15%;
+    }
 }
 
 /* .redeslogo li {
@@ -273,69 +311,70 @@ body.dark-mode-active .linkredes:hover {
 
 .rede1:hover .fa-brands,
 .rede1:hover .sredes {
-    color: red;
+    color: white;
 }
 body.dark-mode-active .rede1:hover .fa-brands,
 body.dark-mode-active .rede1:hover .sredes {
-    color: red;
+    color: black;
 }
 
 .rede2:hover .fa-brands,
 .rede2:hover .sredes {
-    color: red;
+    color: white;
 }
 body.dark-mode-active .rede2:hover .fa-brands,
 body.dark-mode-active .rede2:hover .sredes {
-    color: red;
+    color: black;
 }
 
 .rede3:hover .fa-brands,
 .rede3:hover .sredes {
-    color: red;
+    color: white;
 }
 body.dark-mode-active .rede3:hover .fa-brands,
 body.dark-mode-active .rede3:hover .sredes {
-    color: red;
+    color: black;
 }
 
 .rede1:hover:nth-child(1) {
     & a {
-        background: #3b5998;
+        background: red;
 
         &::before {
-            background: #365492;
+            background: darkred;
         }
 
         &::after {
-            background: #4a69ad;
+            background: crimson
+            ;
         }
     }
 }
 
 .rede2:hover:nth-child(2) {
     & a {
-        background: #3b5998;
+        background: blue;
 
         &::before {
-            background: #365492;
+            background: darkblue;
         }
 
         &::after {
-            background: #4a69ad;
+            background: lightblue;
         }
     }
 }
 
 .rede3:hover:nth-child(3) {
     & a {
-        background: #3b5998;
+        background: green;
 
         &::before {
-            background: #365492;
+            background: darkgreen;
         }
 
         &::after {
-            background: #4a69ad;
+            background: lightgreen;
         }
     }
 }
@@ -352,6 +391,19 @@ body.dark-mode-active .rede3:hover .sredes {
     height: vh;
     margin-top: 150px;
 } */
+
+.mainSM{
+    padding-top: 5%;
+    height: 200vh;
+    border: 2px solid navy;
+}
+
+.mainPJT{
+    padding-top: 1%;
+    border: 2px solid blueviolet;
+    height: 100vh;
+}
+
 footer {
     width: 100%;
     position: fixed;

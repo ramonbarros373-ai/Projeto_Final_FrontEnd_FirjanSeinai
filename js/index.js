@@ -32,3 +32,8 @@ btn.onclick = function () {
 };
 
 //Botao de tema fim
+
+// criar uma funçao para que o botao rede mude o paddin-left de 45% para 15% quando a tela diminuir, feito sem  js.
+
+
+
