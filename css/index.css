@@ -26,7 +26,7 @@ body.dark-mode-active {
     right: 24px;
     z-index: 1;
     padding: 12px 16px;
-    border: none;
+    border: 1px solid black;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -47,9 +47,13 @@ header {
     /* justify-content: space-between; achar um alinhamento que somente separe os conteudos de borda a borda */
     /* align-content: center; */
     /* padding: 5px 5px; */
-    /* background-color: lightgray; */
+    background-color: white;
     position: fixed;
     z-index: 1000;
+}
+body.dark-mode-active header{
+    background-color: black;
+
 }
 
 .navbar {
@@ -60,6 +64,17 @@ header {
     /* margin-bottom: 10px; */
     /* z-index: 9999; */
     background-color: white;
+    /* transition: background-color 0.3s ease; */
+}
+@media(max-width: 300vh){
+    .navbar{
+        background-color: rgba(255, 255, 255, 0.5) !important;
+    }
+}
+ @media(max-width: 300vh){
+    body.dark-mode-active .navbar{
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
 }
 
 /* .nav { */
@@ -99,6 +114,7 @@ main {
     text-align: center;
     height: 150vh;
     /* transition: width 0.5s ease-in-out; */
+    padding-top: 10%;
 }
 /* .mainlogo .logo2{
     padding-top: 10px;
@@ -106,6 +122,7 @@ main {
 
 .txtlogo {
     border: 2px solid brown;
+    /* colocar as letras com um degrade */
 }
 
 .logo2 {
@@ -393,25 +410,26 @@ body.dark-mode-active .rede3:hover .sredes {
 } */
 
 .mainSM{
-    padding-top: 5%;
+    padding-top: 10%;
     height: 200vh;
     border: 2px solid navy;
 }
 
 .mainPJT{
-    padding-top: 1%;
+    padding-top: 10%;
     border: 2px solid blueviolet;
     height: 100vh;
 }
 
 footer {
     width: 100%;
-    position: fixed;
+    /* position: fixed; tirei isso para que a pagina possa descer*/
     border: 2px solid green;
     height: 60px;
     text-align: left;
     bottom: 0px;
     background-color: #f8f9fa;
+    /* adicionar algo para que ao alinhar com os contatos fique chamando atençao para a section */
 }
 body.dark-mode-active footer{
     background-color: #333;
