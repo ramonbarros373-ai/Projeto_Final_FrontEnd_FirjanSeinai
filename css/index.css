@@ -2,7 +2,10 @@
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
 /* Botao de tema inicio  */
-
+/* html {
+  Isso faz com que todos os links de âncora rolem suavemente
+  scroll-behavior: smooth !important; 
+} */
 body {
     /* margin: 0;
     padding: 0;*/
@@ -12,6 +15,7 @@ body {
     color: #222;
     transition: background-color 0.1s, color 0.1s;
     /* Adiciona transiçã dos temas */
+    /* scroll-behavior: smooth; */
 }
 
 /* CSS para o tema escuro */
