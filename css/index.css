@@ -124,10 +124,46 @@ main {
     padding-top: 10px;
 } */
 
+/* colocar as letras com um degrade inicio */
 .txtlogo {
     border: 2px solid brown;
-    /* colocar as letras com um degrade */
+    font-size: 2.5rem; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto mais espesso para o efeito funcionar melhor */
+    text-transform: uppercase;
+    font-family: sans-serif;
+    /* 1. Define o fundo como um gradiente grande (ex: 400% da largura) */
+    background: linear-gradient(to right, 
+        #ef5350,  /* Vermelho */
+        #f48fb1,  /* Rosa */
+        #7e57c2,  /* Roxo */
+        #2196f3,  /* Azul */
+        #26a69a,  /* Turquesa */
+        #ffeb3b,  /* Amarelo */
+        #ef5350   /* Volta ao Vermelho */
+    );
+    background-size: 400% auto; /* Torna o gradiente 4x maior que o elemento */
+
+    /* 2. Aplica o texto como uma máscara para o fundo */
+    -webkit-background-clip: text; /* Efeito específico para navegadores Webkit (Chrome, Safari, Edge) */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente */
+    
+    /* 3. Inicia a animação */
+    animation: gradient-animation 15s ease infinite; /* Nome da animação, duração, easing, loop infinito */
 }
+/* 4. Define os Keyframes da Animação */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% center; /* Posição inicial do gradiente */
+    }
+    50% {
+        background-position: 100% center; /* Move o gradiente para a direita */
+    }
+    100% {
+        background-position: 0% center; /* Retorna para a posição inicial */
+    }
+}
+/* colocar as letras com um degrade fim */
 
 .logo2 {
     width: 150px;
@@ -136,6 +172,85 @@ main {
     border-radius: 50%;
 }
 
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#logodesc1{
+    font-size: 1.rem;
+    font-weight: 700;
+}
+.logodesc1 .logodescS1:after {
+    content: 'Desenvolvedor_';
+    animation: words1 6s infinite; 
+}
+@keyframes words1{
+    0%, 33%{
+        content: 'Desenvolvedor_';
+        color: #00ff7f;
+    }
+
+    34%, 66%{
+        content: 'Front-End_';
+        color: #ff00ff;
+    }
+
+    67%, 100%{
+        content: 'Em Formaçao_';
+        color: #ffd700;
+    }
+}
+
+#logodesc2{
+    font-size: 1.rem;
+    font-weight: 700;
+}
+.logodesc2 .logodescS2:after {
+    content: 'Front_End';
+    animation: words2 6s infinite; 
+}
+@keyframes words2{
+    0%, 33%{
+        content: 'Front-End';
+        color: #ffd700;
+    }
+
+    34%, 66%{
+        content: 'Em Formaçao';
+        color: #00ff7f;
+    }
+
+    67%, 100%{
+        content: 'Desenvolvedor';
+        color: #ff00ff;
+    }
+}
+
+#logodesc3{
+    font-size: 1.rem;
+    font-weight: 700;
+}
+.logodesc3 .logodescS3:before {
+    content: 'Em Formaçao';
+    animation: words3 6s infinite; 
+}
+@keyframes words3{
+    0%, 33%{
+        content: '_Em Formaçao';
+        color: #ff00ff;
+    }
+
+    34%, 66%{
+        content: '_Desenvolvedor';
+        color: #ffd700;
+    }
+
+    67%, 100%{
+        content: '_Front-End';
+        color: #00ff7f;
+    }
+}
 
 /* inicio das modificaçaoes para o domino */
 .listaredes {
@@ -399,8 +514,8 @@ body.dark-mode-active .rede3:hover .sredes {
         }
     }
 }
-
 /* fim das modificaçoes para o domino */
+
 /* h2 {
     border: 2px solid purple;
     width: 100px;
