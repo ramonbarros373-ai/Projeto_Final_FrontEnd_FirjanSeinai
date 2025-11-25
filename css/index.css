@@ -24,11 +24,11 @@ body.dark-mode-active {
     color: #eee;
 }
 
-#btn-tema {
+#btnTema {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1;
+    top: 14px;
+    right: 10px;
+    z-index: 10000;
     padding: 12px 16px;
     border: 1px solid black;
     border-radius: 50%;
@@ -37,9 +37,42 @@ body.dark-mode-active {
     cursor: pointer;
     font-size: 24px;
     /* dar um jeito do mudar a posiçao do botao, mas nao sei onde por */
+    transition: padding-left 0.9s ease;
+}
+
+@media(max-width: 109.2vh) {
+    #btnTema {
+        top: 14px;
+        right: 73px;
+    }
 }
 
 /* Botao de tema fim */
+/* Botao de retorno inicio */
+#btnTop {
+    position: fixed;
+    bottom: 45px;
+    right: 24px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: rgb(5, 17, 22);
+    /* cor do botão */
+    color: white;
+    border: 1px solid black;
+    outline: none;
+    padding: 16px 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#btnTop:hover {
+    background-color: rgb(5, 17, 22);
+    transform: scale(1.1);
+}
+
+/* Botao de retorno fim */
 
 header {
     width: 100%;
@@ -55,7 +88,8 @@ header {
     position: fixed;
     z-index: 1000;
 }
-body.dark-mode-active header{
+
+body.dark-mode-active header {
     background-color: black;
 
 }
@@ -70,13 +104,15 @@ body.dark-mode-active header{
     background-color: white;
     /* transition: background-color 0.3s ease; */
 }
-@media(max-width: 300vh){
-    .navbar{
+
+@media(max-width: 300vh) {
+    .navbar {
         background-color: rgba(255, 255, 255, 0.5) !important;
     }
 }
- @media(max-width: 300vh){
-    body.dark-mode-active .navbar{
+
+@media(max-width: 300vh) {
+    body.dark-mode-active .navbar {
         background-color: rgba(0, 0, 0, 0.5) !important;
     }
 }
@@ -105,7 +141,7 @@ main {
     justify-content: center;
     /* align-items: center; */
     text-align: center;
-        /* transition: width 0.5s ease-in-out; */
+    /* transition: width 0.5s ease-in-out; */
 
 }
 
@@ -120,6 +156,7 @@ main {
     /* transition: width 0.5s ease-in-out; */
     padding-top: 10%;
 }
+
 /* .mainlogo .logo2{
     padding-top: 10px;
 } */
@@ -127,42 +164,62 @@ main {
 /* colocar as letras com um degrade inicio */
 .txtlogo {
     border: 2px solid brown;
-    font-size: 2.5rem; /* Tamanho do texto */
-    font-weight: bold; /* Deixa o texto mais espesso para o efeito funcionar melhor */
+    font-size: 2.5rem;
+    /* Tamanho do texto */
+    font-weight: bold;
+    /* Deixa o texto mais espesso para o efeito funcionar melhor */
     text-transform: uppercase;
     font-family: sans-serif;
     /* 1. Define o fundo como um gradiente grande (ex: 400% da largura) */
-    background: linear-gradient(to right, 
-        #ef5350,  /* Vermelho */
-        #f48fb1,  /* Rosa */
-        #7e57c2,  /* Roxo */
-        #2196f3,  /* Azul */
-        #26a69a,  /* Turquesa */
-        #ffeb3b,  /* Amarelo */
-        #ef5350   /* Volta ao Vermelho */
-    );
-    background-size: 400% auto; /* Torna o gradiente 4x maior que o elemento */
+    background: linear-gradient(to right,
+            #ef5350,
+            /* Vermelho */
+            #f48fb1,
+            /* Rosa */
+            #7e57c2,
+            /* Roxo */
+            #2196f3,
+            /* Azul */
+            #26a69a,
+            /* Turquesa */
+            #ffeb3b,
+            /* Amarelo */
+            #ef5350
+            /* Volta ao Vermelho */
+        );
+    background-size: 400% auto;
+    /* Torna o gradiente 4x maior que o elemento */
 
     /* 2. Aplica o texto como uma máscara para o fundo */
-    -webkit-background-clip: text; /* Efeito específico para navegadores Webkit (Chrome, Safari, Edge) */
+    -webkit-background-clip: text;
+    /* Efeito específico para navegadores Webkit (Chrome, Safari, Edge) */
     background-clip: text;
-    -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente */
-    
+    -webkit-text-fill-color: transparent;
+    /* Torna a cor do texto transparente */
+
     /* 3. Inicia a animação */
-    animation: gradient-animation 15s ease infinite; /* Nome da animação, duração, easing, loop infinito */
+    animation: gradient-animation 15s ease infinite;
+    /* Nome da animação, duração, easing, loop infinito */
 }
+
 /* 4. Define os Keyframes da Animação */
 @keyframes gradient-animation {
     0% {
-        background-position: 0% center; /* Posição inicial do gradiente */
+        background-position: 0% center;
+        /* Posição inicial do gradiente */
     }
+
     50% {
-        background-position: 100% center; /* Move o gradiente para a direita */
+        background-position: 100% center;
+        /* Move o gradiente para a direita */
     }
+
     100% {
-        background-position: 0% center; /* Retorna para a posição inicial */
+        background-position: 0% center;
+        /* Retorna para a posição inicial */
     }
 }
+
 /* colocar as letras com um degrade fim */
 
 .logo2 {
@@ -172,82 +229,100 @@ main {
     border-radius: 50%;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: center;
 }
 
-#logodesc1{
+#logodesc1 {
     font-size: 1.rem;
     font-weight: 700;
 }
+
 .logodesc1 .logodescS1:after {
-    content: 'Desenvolvedor_';
-    animation: words1 6s infinite; 
+    content: 'Desenvolvedor';
+    animation: words1 6s infinite;
 }
-@keyframes words1{
-    0%, 33%{
+
+@keyframes words1 {
+
+    0%,
+    33% {
         content: 'Desenvolvedor_';
         color: #00ff7f;
     }
 
-    34%, 66%{
+    34%,
+    66% {
         content: 'Front-End_';
         color: #ff00ff;
     }
 
-    67%, 100%{
+    67%,
+    100% {
         content: 'Em Formaçao_';
         color: #ffd700;
     }
 }
 
-#logodesc2{
+#logodesc2 {
     font-size: 1.rem;
     font-weight: 700;
 }
+
 .logodesc2 .logodescS2:after {
     content: 'Front_End';
-    animation: words2 6s infinite; 
+    animation: words2 6s infinite;
 }
-@keyframes words2{
-    0%, 33%{
-        content: 'Front-End';
+
+@keyframes words2 {
+
+    0%,
+    33% {
+        content: 'Em Formaçao';
         color: #ffd700;
     }
 
-    34%, 66%{
-        content: 'Em Formaçao';
+    34%,
+    66% {
+        content: 'Desenvolvedor';
         color: #00ff7f;
     }
 
-    67%, 100%{
-        content: 'Desenvolvedor';
+    67%,
+    100% {
+        content: 'Front-End';
         color: #ff00ff;
     }
 }
 
-#logodesc3{
+#logodesc3 {
     font-size: 1.rem;
     font-weight: 700;
 }
+
 .logodesc3 .logodescS3:before {
     content: 'Em Formaçao';
-    animation: words3 6s infinite; 
+    animation: words3 6s infinite;
 }
-@keyframes words3{
-    0%, 33%{
-        content: '_Em Formaçao';
+
+@keyframes words3 {
+
+    0%,
+    33% {
+        content: '_Front-End';
         color: #ff00ff;
     }
 
-    34%, 66%{
-        content: '_Desenvolvedor';
+    34%,
+    66% {
+        content: ' _Em Formaçao';
         color: #ffd700;
     }
 
-    67%, 100%{
-        content: '_Front-End';
+    67%,
+    100% {
+        content: '_Desenvolvedor';
         color: #00ff7f;
     }
 }
@@ -296,8 +371,9 @@ main {
     /* margin-left: 10px; */
     transition: padding-left 0.3s ease;
 }
-@media(max-width: 100vh){
-    .redeslogo .rede1{
+
+@media(max-width: 100vh) {
+    .redeslogo .rede1 {
         padding-left: 15%;
     }
 }
@@ -316,15 +392,18 @@ main {
     transition: padding-left 0.3s ease;
     /* transition: width 0.5s ease-in-out; */
 }
-@media(max-width: 200vh){
-    .redeslogo .rede2{
+
+@media(max-width: 200vh) {
+    .redeslogo .rede2 {
         padding-left: 20%;
     }
-    transition: padding-left 0.3s ease;
+
+    /* transition: padding-left 0.3s ease; */
 
 }
-@media(max-width: 100vh){
-    .redeslogo .rede2{
+
+@media(max-width: 100vh) {
+    .redeslogo .rede2 {
         padding-left: 15%;
     }
 }
@@ -343,8 +422,9 @@ main {
     transition: padding-left 0.3s ease;
 
 }
-@media(max-width: 100vh){
-    .redeslogo .rede3{
+
+@media(max-width: 100vh) {
+    .redeslogo .rede3 {
         padding-left: 15%;
     }
 }
@@ -368,9 +448,11 @@ main {
     transition: .5s;
     padding-right: 14px;
 }
+
 body.dark-mode-active .fa-brands {
     color: white;
 }
+
 .linkredes {
     width: 210px;
     height: 80px;
@@ -380,12 +462,13 @@ body.dark-mode-active .fa-brands {
     text-align: left;
     padding-left: 20px;
     transform: rotate(-30deg) skew(25deg);
-    translate(0, 0);
+    translate: (0, 0);
     box-shadow: -20px 20px 10px black;
 }
+
 body.dark-mode-active .linkredes {
     box-shadow: -20px 20px 10px white;
-        background-color: black;
+    background-color: black;
 
 }
 
@@ -399,7 +482,8 @@ body.dark-mode-active .linkredes {
     transition: .5s;
     z-index: 10;
 }
-body.dark-mode-active .linkredes .sredes{
+
+body.dark-mode-active .linkredes .sredes {
     color: white;
 
 }
@@ -415,6 +499,7 @@ body.dark-mode-active .linkredes .sredes{
     transform: rotate(0deg) skewY(-45deg);
     z-index: 10;
 }
+
 body.dark-mode-active .linkredes:before {
     background: black;
 }
@@ -431,6 +516,7 @@ body.dark-mode-active .linkredes:before {
     z-index: 10;
 
 }
+
 body.dark-mode-active .linkredes:after {
     background: black;
 }
@@ -440,6 +526,7 @@ body.dark-mode-active .linkredes:after {
     transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
     box-shadow: -50px 50px 30px black;
 }
+
 body.dark-mode-active .linkredes:hover {
     box-shadow: -50px 50px 30px white;
 
@@ -449,6 +536,7 @@ body.dark-mode-active .linkredes:hover {
 .rede1:hover .sredes {
     color: white;
 }
+
 body.dark-mode-active .rede1:hover .fa-brands,
 body.dark-mode-active .rede1:hover .sredes {
     color: black;
@@ -458,6 +546,7 @@ body.dark-mode-active .rede1:hover .sredes {
 .rede2:hover .sredes {
     color: white;
 }
+
 body.dark-mode-active .rede2:hover .fa-brands,
 body.dark-mode-active .rede2:hover .sredes {
     color: black;
@@ -467,6 +556,7 @@ body.dark-mode-active .rede2:hover .sredes {
 .rede3:hover .sredes {
     color: white;
 }
+
 body.dark-mode-active .rede3:hover .fa-brands,
 body.dark-mode-active .rede3:hover .sredes {
     color: black;
@@ -481,8 +571,7 @@ body.dark-mode-active .rede3:hover .sredes {
         }
 
         &::after {
-            background: crimson
-            ;
+            background: crimson;
         }
     }
 }
@@ -514,6 +603,7 @@ body.dark-mode-active .rede3:hover .sredes {
         }
     }
 }
+
 /* fim das modificaçoes para o domino */
 
 /* h2 {
@@ -528,13 +618,13 @@ body.dark-mode-active .rede3:hover .sredes {
     margin-top: 150px;
 } */
 
-.mainSM{
+.mainSM {
     padding-top: 10%;
     height: 200vh;
     border: 2px solid navy;
 }
 
-.mainPJT{
+.mainPJT {
     padding-top: 10%;
     border: 2px solid blueviolet;
     height: 100vh;
@@ -550,7 +640,8 @@ footer {
     background-color: #f8f9fa;
     /* adicionar algo para que ao alinhar com os contatos fique chamando atençao para a section */
 }
-body.dark-mode-active footer{
+
+body.dark-mode-active footer {
     background-color: #333;
 }
 
