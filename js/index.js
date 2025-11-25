@@ -71,7 +71,7 @@ const btnTemaA = document.getElementById('btnTemaA');
 
 btnTemaA.onclick = function (){
     const videoElement = document.createElement('video');
-    videoElement.src = '../img/vecteezy_prismatic-iridescent-gradient-surface-with-wavy-motion-and_54525645.mp4';
+    videoElement.src = '../img/small-vecteezy_prismatic-iridescent-gradient-surface-with-wavy-motion-and_54525645_small.mp4';
     videoElement.autoplay = true;
     videoElement.loop = true;
     videoElement.muted = true;
