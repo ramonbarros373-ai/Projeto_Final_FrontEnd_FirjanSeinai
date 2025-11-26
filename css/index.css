@@ -78,7 +78,7 @@ header {
     width: 100%;
     height: 85px;
     /* margin: 0 auto; */
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: space-between; achar um alinhamento que somente separe os conteudos de borda a borda */
@@ -95,7 +95,7 @@ body.dark-mode-active header {
 }
 
 .navbar {
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
     /* position: fixed; */
     width: 100%;
     /* margin-top: 10px; */
@@ -148,7 +148,7 @@ main {
 
 .mainlogo {
     display: flexbox;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -163,7 +163,7 @@ main {
 
 /* colocar as letras com um degrade inicio */
 .txtlogo {
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
     font-size: 2.5rem;
     /* Tamanho do texto */
     font-weight: bold;
@@ -223,9 +223,9 @@ main {
 /* colocar as letras com um degrade fim */
 
 .logo2 {
-    width: 150px;
-    height: 150px;
-    border: 2px solid yellow;
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid yellow; */
     border-radius: 50%;
 }
 
@@ -329,7 +329,7 @@ main {
 
 /* inicio das modificaçaoes para o domino */
 .listaredes {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* height: 100vh; */
     display: flex;
     justify-content: center;
@@ -342,7 +342,7 @@ main {
 }
 
 .redeslogo {
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     /* list-style-type: none; */
     /* justify-content: center; */
     /* align-items: center; */
@@ -622,7 +622,114 @@ body.dark-mode-active .rede3:hover .sredes {
     padding-top: 10%;
     height: 200vh;
     border: 2px solid navy;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+    /* background: #000; */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
 }
+.titulo1{
+    .matrix-bg {
+        background: transparent;
+        overflow: hidden;
+        margin: 0;
+        /* height: 100vh; */
+      }
+      
+      .matrix-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        z-index: 2; /* Ensure it stays above the rain effect */
+      }
+      
+      .matrix-text {
+        color: #0f0;
+        font-size: 80px;
+        font-family: monospace;
+        position: relative;
+        text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+        z-index: 2; /* Ensure it stays above the rain effect */
+      }
+      
+      .matrix-text::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: glitch 2s infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        transform: translate(-2px, -2px);
+        color: #0f0;
+        text-shadow: 0 0 5px #0f0, 0 0 15px #0f0;
+      }
+      
+      .rain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 255, 0, 0.1) 0,
+          rgba(0, 255, 0, 0.2) 2px,
+          transparent 4px
+        );
+        animation: rain 10s linear infinite;
+        z-index: 1; /* Place it behind the text */
+      }
+      
+      /* Animation for the rain effect */
+      @keyframes rain {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+      
+      /* Glitch effect for the text */
+      @keyframes glitch {
+        0%, 100% {
+          clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+          transform: translate(0);
+        }
+        33% {
+          clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+          transform: translate(-5px, -5px);
+        }
+        66% {
+          clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+          transform: translate(5px, 5px);
+        }
+        }
+      
+}
+
+.texto1{
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+
 
 .mainPJT {
     padding-top: 10%;
