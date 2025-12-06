@@ -71,7 +71,7 @@ const btnTemaA = document.getElementById('btnTemaA');
 
 btnTemaA.onclick = function (){
     const videoElement = document.createElement('video');
-    videoElement.src = '../img/small-vecteezy_prismatic-iridescent-gradient-surface-with-wavy-motion-and_54525645_small.mp4';
+    videoElement.src = 'img/small-vecteezy_prismatic-iridescent-gradient-surface-with-wavy-motion-and_54525645_small.mp4';
     videoElement.autoplay = true;
     videoElement.loop = true;
     videoElement.muted = true;
@@ -91,7 +91,7 @@ const btnTemaB = document.getElementById('btnTemaB');
 
 btnTemaB.onclick = function (){
     const videoElement = document.createElement('video');
-    videoElement.src = '../img/vecteezy_sparkling-stars-on-a-black-background_2018554.mp4';
+    videoElement.src = 'img/vecteezy_sparkling-stars-on-a-black-background_2018554.mp4';
     videoElement.autoplay = true;
     videoElement.loop = true;
     videoElement.muted = true;
@@ -111,7 +111,7 @@ const btnTemaC = document.getElementById('btnTemaC');
 
 btnTemaC.onclick = function (){
     const videoElement = document.createElement('video');
-    videoElement.src = '../img/112836-697207951.mp4';
+    videoElement.src = 'img/112836-697207951.mp4';
     videoElement.autoplay = true;
     videoElement.loop = true;
     videoElement.muted = true;

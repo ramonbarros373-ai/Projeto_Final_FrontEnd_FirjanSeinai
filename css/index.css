@@ -136,7 +136,7 @@ main {
     /* height: 250vh; */
     /* display: flex; */
     padding-top: 100px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* margin-top: 150px; */
     justify-content: center;
     /* align-items: center; */
@@ -152,7 +152,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 150vh;
+    height: 120vh;
     /* transition: width 0.5s ease-in-out; */
     padding-top: 10%;
 }
@@ -620,8 +620,8 @@ body.dark-mode-active .rede3:hover .sredes {
 
 .mainSM {
     padding-top: 10%;
-    height: 200vh;
-    border: 2px solid navy;
+    height: 170vh;
+    /* border: 2px solid navy; */
     /* display: flex; */
     justify-content: center;
     align-items: center;
@@ -631,33 +631,43 @@ body.dark-mode-active .rede3:hover .sredes {
     font-family: 'Arial', sans-serif;
     overflow: hidden;
 }
-.titulo1{
+@media(max-width: 900px) {
+    .mainSM {
+        height: 200%;
+        padding-bottom: 10%;
+    }
+}
+
+
+.titulo1 {
     .matrix-bg {
         background: transparent;
         overflow: hidden;
         margin: 0;
         /* height: 100vh; */
-      }
-      
-      .matrix-container {
+    }
+
+    .matrix-container {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         /* height: 100vh; */
-        z-index: 2; /* Ensure it stays above the rain effect */
-      }
-      
-      .matrix-text {
+        z-index: 2;
+        /* Ensure it stays above the rain effect */
+    }
+
+    .matrix-text {
         color: #0f0;
         font-size: 80px;
         font-family: monospace;
         position: relative;
         text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
-        z-index: 2; /* Ensure it stays above the rain effect */
-      }
-      
-      .matrix-text::before {
+        z-index: 2;
+        /* Ensure it stays above the rain effect */
+    }
+
+    .matrix-text::before {
         content: attr(data-text);
         position: absolute;
         top: 0;
@@ -669,83 +679,189 @@ body.dark-mode-active .rede3:hover .sredes {
         transform: translate(-2px, -2px);
         color: #0f0;
         text-shadow: 0 0 5px #0f0, 0 0 15px #0f0;
-      }
-      
-      .rain {
+    }
+
+    .rain {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: repeating-linear-gradient(
-          0deg,
-          rgba(0, 255, 0, 0.1) 0,
-          rgba(0, 255, 0, 0.2) 2px,
-          transparent 4px
-        );
+        background: repeating-linear-gradient(0deg,
+                rgba(0, 255, 0, 0.1) 0,
+                rgba(0, 255, 0, 0.2) 2px,
+                transparent 4px);
         animation: rain 10s linear infinite;
-        z-index: 1; /* Place it behind the text */
-      }
-      
-      /* Animation for the rain effect */
-      @keyframes rain {
+        z-index: 1;
+        /* Place it behind the text */
+    }
+
+    /* Animation for the rain effect */
+    @keyframes rain {
         0% {
-          transform: translateY(-100%);
+            transform: translateY(-100%);
         }
+
         100% {
-          transform: translateY(100%);
+            transform: translateY(100%);
         }
-      }
-      
-      /* Glitch effect for the text */
-      @keyframes glitch {
-        0%, 100% {
-          clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-          transform: translate(0);
+    }
+
+    /* Glitch effect for the text */
+    @keyframes glitch {
+
+        0%,
+        100% {
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            transform: translate(0);
         }
+
         33% {
-          clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
-          transform: translate(-5px, -5px);
+            clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+            transform: translate(-5px, -5px);
         }
+
         66% {
-          clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
-          transform: translate(5px, 5px);
+            clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+            transform: translate(5px, 5px);
         }
-        }
-      
+    }
+
 }
 
-.texto1{
+.texto1 {
     font-size: 20px;
     color: #fff;
     text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
     animation: glow 1.5s infinite alternate;
 }
+
 @keyframes glow {
     0% {
         text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
     }
+
     100% {
         text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
     }
 }
 
+.maintTlv {
+    /* border: 5px solid black; */
+    background: rgba(6, 1, 46, 0.507);
+    height: 50vh;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10%;
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+}
+
+
+.carousel-inner {
+    /* margin-left: 40%; */
+    /* margin-right: 60%; */
+    justify-self: center;
+    display: flex;
+    height: 300px;
+    width: 400px;
+    border-radius: 5%;
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+    transition: padding-left 0.3s ease;
+    justify-self: center;
+    display: flex;
+}
+
+@media(max-width: 800vh) {
+    .maintTlv .carousel-inner {
+        /* margin-left: 10%; */
+        justify-self: center;
+        display: flex;
+        height: 150px;
+        width: 250px;
+
+    }
+}
+@media(max-width: 300vh) {
+    .carousel-inner {
+        justify-self: center;
+        display: flex;
+        height: 50px;
+        width: 150px;
+
+    }
+}
+
 
 .mainPJT {
-    padding-top: 10%;
-    border: 2px solid blueviolet;
-    height: 100vh;
+    /* display: grid; */
+    padding-top: 5%;
+    /* padding-bottom: 30%; */
+    /* border: 2px solid blueviolet; */
+    height: 50vh;
+    background: lightgray;
+    width: 90%;
+    border-radius: 10%;
+    box-shadow: 0 5px 20px darkgray;
+    /* left: 50%; */
+    margin-left: 5%;
+}
+
+
+body.dark-mode-active .mainPJT {
+    background: darkgray;
+    box-shadow: 0 5px 20px lightgray;
+}
+
+.pjts {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.pjts a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pjts :before {
+    content: 'Projeto';
+    animation: words1 6s infinite;
+}
+
+@keyframes words1 {
+
+    0%,
+    33% {
+        content: 'Projeto';
+        color: #00ff7f;
+    }
+
+    34%,
+    66% {
+        content: 'Projeto';
+        color: #ff00ff;
+    }
+
+    67%,
+    100% {
+        content: 'Projeto';
+        color: #ffd700;
+    }
 }
 
 footer {
     width: 100%;
     /* position: fixed; tirei isso para que a pagina possa descer*/
-    border: 2px solid green;
+    /* border: 2px solid green; */
     height: 60px;
     text-align: left;
     bottom: 0px;
     background-color: #f8f9fa;
     /* adicionar algo para que ao alinhar com os contatos fique chamando atençao para a section */
+}
+@media(max-width: 900px) {
+    footer {
+        height: 100px;
+    }
 }
 
 body.dark-mode-active footer {
@@ -753,10 +869,11 @@ body.dark-mode-active footer {
 }
 
 .contatos {
+    /* display: flex; */
     width: 100%;
     /* height: 50px; */
     position: fixed;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     bottom: 0px;
     background-color: #f8f9fa;
     color: #212529;
@@ -766,7 +883,16 @@ body.dark-mode-active footer {
     gap: 163px;
     padding-left: 10px;
     list-style-type: none;
+    transition: padding-left 0.3s ease;
+}
 
+@media(max-width: 200px) {
+    .contatos {
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+        gap: 0;
+    }
 }
 
 
